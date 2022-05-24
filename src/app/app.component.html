@@ -1,0 +1,10 @@
+<div class="main-content">
+    <div>
+        <app-header></app-header>
+    </div>
+    <div class="shopping-area">
+        <product-list class="product-list" (productAdded)="addProductToCart($event)" [products]="productList"></product-list>
+        <shopping-cart class="product-list" (productRemoved)="removeProduct($event)"></shopping-cart>
+    </div>
+    <div class="sum-area">Total: {{dataService.calcTotalPrice()}}</div>
+</div>

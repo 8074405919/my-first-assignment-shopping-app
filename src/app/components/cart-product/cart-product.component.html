@@ -1,0 +1,5 @@
+<div class="form-outline" *ngFor="let product of products" [hidden]="product.num == 0">
+    <div class="title">{{product.name}}</div>
+    <input type="number" id="typeNumber" class="form-control" (ngModelChange)="modelChanged($event)"
+        [(ngModel)]="product.num" min="0" />
+</div>
